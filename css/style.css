@@ -2,7 +2,7 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
-	background-image: url('../img/5268821.jpg');
+	background-image: url('../img/moroccan-flower-dark.png');
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -14,7 +14,13 @@ body {
 	text-align: center;
 	width: 100vw;
 	height: 100vh;
-	background-color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.date {
+	font-size: 1.25rem;
+	font-weight: 400;
+	margin: 10px auto;
 }
 
 .info {
@@ -25,7 +31,7 @@ body {
 
 .heure {
 	/* background-color: tan; */
-	font-size: 10rem;
+	font-size: clamp(2em, 10vw, 15em);
 	font-weight: bold;
 }
 
@@ -40,11 +46,13 @@ body {
 	padding: 20px;
 }
 .box {
-	border: 1px dashed black;
-	height: 150px;
-	width: 150px;
-	background-color: aliceblue;
+	/* border: 1px solid black; */
+	height: 120px;
+	width: 120px;
+	padding: 5px;
+	background-color: #fff;
 	border-radius: 8px;
+	/* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); */
 }
 
 .box > h4 {

@@ -15,6 +15,13 @@ const isha = document.getElementById('isha');
 var adhan = require('adhan');
 const moment = require('moment-timezone');
 
+hijri.innerText = new Intl.DateTimeFormat('ar-TN-u-ca-islamic', {
+	day: 'numeric',
+	month: 'long',
+	weekday: 'long',
+	year: 'numeric',
+}).format(Date.now());
+
 /**
  * Géolocalisation
  */
@@ -47,7 +54,10 @@ async function reverseGeo(longitude, latitude) {
 		`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`
 	);
 	const day = await response.json();
-	console.log(day);
+	//console.log(day);
+	country.innerText = day.address.country;
+	city.innerText = day.address.state;
+	//console.log(day.address.state);
 }
 
 geoFindMe();
@@ -69,14 +79,14 @@ updateTime();
 
 // Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-document.getElementById('guess').innerText = moment.tz.guess();
-const guess = moment.tz.guess();
-
-console.log('lat' + lat, 'long' + long);
-
 function getPrayer(longitude, latitude) {
 	var coordinates = new adhan.Coordinates(latitude, longitude);
 	var dateP = new Date();
+
+	gregorian.innerText = dateP.toLocaleDateString();
+
+	document.getElementById('guess').innerText = moment.tz.guess();
+	const guess = moment.tz.guess();
 
 	var params = adhan.CalculationMethod.Qatar();
 	params.madhab = adhan.Madhab.Shafi;
