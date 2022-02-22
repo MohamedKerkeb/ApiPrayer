@@ -70,6 +70,7 @@ function updateTime() {
 	const now = moment();
 	const humanReadable = now.format('HH:mm:ss');
 	heure.textContent = humanReadable;
+	
 }
 
 setInterval(updateTime, 1000);
@@ -113,6 +114,7 @@ function getPrayer(longitude, latitude) {
 }
 
 function showPrayer(fajrTime, sunriseTime, dhuhrTime, asrTime, maghribTime, ishaTime) {
+	
 	fajr.innerHTML = `
       <div class="box">
         <h4>FAJR</h4>
