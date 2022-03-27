@@ -7,6 +7,7 @@ const hijri = document.getElementById('hijri');
 const heure = document.getElementById('heure');
 
 const fajr = document.getElementById('fajr');
+const sunrise = document.getElementById('sunrise');
 const dhuhr = document.getElementById('dhuhr');
 const asr = document.getElementById('asr');
 const maghrib = document.getElementById('maghrib');
@@ -70,7 +71,6 @@ function updateTime() {
 	const now = moment();
 	const humanReadable = now.format('HH:mm:ss');
 	heure.textContent = humanReadable;
-	
 }
 
 setInterval(updateTime, 1000);
@@ -114,10 +114,15 @@ function getPrayer(longitude, latitude) {
 }
 
 function showPrayer(fajrTime, sunriseTime, dhuhrTime, asrTime, maghribTime, ishaTime) {
-	
 	fajr.innerHTML = `
       <div class="box">
         <h4>FAJR</h4>
+        <div class="salath">${fajrTime}</div>
+      </div>
+    `;
+	sunrise.innerHTML = `
+      <div class="box">
+        <h4>sunrise</h4>
         <div class="salath">${fajrTime}</div>
       </div>
     `;
