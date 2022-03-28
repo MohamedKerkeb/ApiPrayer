@@ -8,36 +8,71 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/normalize.css" />
 		<!--Javascript -->
-		<script src="js/app.js" defer type="module"></script>
+		<!-- <script src="js/app.js" defer type="module"></script> -->
 
 		<title>Heure de Priére</title>
 	</head>
 	<body onload="geoFindMe()">
 		<div class="container">
 			<header>
-				<h1>PRAYER TIMES</h1>
 				<div id="guess"></div>
-
-				<div class="info">
-					<h2 id="city"></h2>
-					<div class="location">
-						<div id="country"></div>
-						<div id="timezone"></div>
+				<div class="infoWrapper">
+					<div class="info">
+						<!-- <h2 id="city"></h2> -->
+						<div class="location">
+							<div id="country">Île-de-France</div>
+							<div id="timezone">France</div>
+						</div>
+						<div class="date" id="date">
+							<div id="gregorian">28/03/2022</div>
+							<div id="hijri">الاثنين، 26 شعبان 1443 هـ</div>
+						</div>
 					</div>
-					<div class="date" id="date">
-						<div id="gregorian"></div>
-						<div id="hijri"></div>
-					</div>
+					<div id="heure" class="heure">22:01:50</div>
 				</div>
-				<div id="heure" class="heure"></div>
 			</header>
 			<div class="contenue">
-				<div id="fajr"></div>
-				<div id="sunrise"></div>
-				<div id="dhuhr"></div>
-				<div id="asr"></div>
-				<div id="maghrib"></div>
-				<div id="isha"></div>
+				<div class="title">
+					<h5>Prayer Times</h5>
+				</div>
+				<div class="boxWrapper">
+					<div id="fajr">
+						<div class="box">
+							<h4>Fajr</h4>
+							<div class="salath">05:50</div>
+						</div>
+					</div>
+					<div id="sunrise">
+						<div class="box">
+							<h4>Sunrise</h4>
+							<div class="salath">07:37</div>
+						</div>
+					</div>
+					<div id="dhuhr">
+						<div class="box">
+							<h4>Dhuhr</h4>
+							<div class="salath">13:56</div>
+						</div>
+					</div>
+					<div id="asr">
+						<div class="box">
+							<h4>Asr</h4>
+							<div class="salath">17:26</div>
+						</div>
+					</div>
+					<div id="maghrib">
+						<div class="box">
+							<h4>Maghrib</h4>
+							<div class="salath">20:15</div>
+						</div>
+					</div>
+					<div id="isha">
+						<div class="box">
+							<h4>Isha</h4>
+							<div class="salath">21:45</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>
