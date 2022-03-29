@@ -82,6 +82,7 @@ header {
 	/* border: 1px solid black; */
 	/* height: 120px; */
 	width: 120px;
+	height: 100px;
 	padding: 5px;
 	margin: 5px;
 	background-color: #fff;
@@ -89,7 +90,8 @@ header {
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 	display: flex;
 	flex-direction: column;
-	align-content: space-between;
+	align-items: baseline;
+	justify-content: space-between;
 	/* border: #3cb79f 1px dashed; */
 }
 
@@ -109,4 +111,5 @@ header {
 	margin: 0;
 	/* border: #212121 dashed 1px; */
 	margin-top: 5px;
+	align-self: flex-end;
 }
